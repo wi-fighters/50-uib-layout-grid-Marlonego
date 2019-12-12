@@ -1,8 +1,17 @@
+* {
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
 .container {
     display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-grid-template-rows:100px 100px 100px;  
-/* gap: 20px;   */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:repeat(4, 200px);   
+     gap: 30px;  
+    border: 2px red solid;
+    height: 100vh;
+
+
 }
 
 div {
@@ -12,4 +21,27 @@ div {
     text-align: center;
     
     
+}
+
+.two {
+    background-color: blue;
+    grid-column: 2 / span 2;
+}
+
+.six {
+    grid-column: 3 / 2 span;
+    background-color:green ;
+
+}
+
+.nine {
+grid-row: 3/span 2;
+grid-column: 2;
+background-color: yellow;
+}
+
+.ten {
+    grid-row: 3 /  span 2;
+    grid-column: 4;
+    background-color: violet;
 }
